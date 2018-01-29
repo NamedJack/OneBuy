@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ejar.onebuy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/wchar_share_img"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SchameFilterActivity">
+
+            <!-- Schame -->
+            <intent-filter>
+                <data
+                    android:host="w"
+                    android:scheme="wongxd" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AtyMainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".LoginActivity">
+
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".GoodDetailActivity" />
+        <activity android:name=".me.JoinRecordActivity" />
+        <activity android:name=".me.ChargeActivity" />
+        <activity android:name=".me.PersonInfoActivity" />
+        <activity android:name=".me.SettingActivity" />
+        <activity android:name=".me.UnboxingActivity" />
+        <activity android:name=".me.AddAdressActivity" />
+        <activity android:name=".me.ServiceActivity" />
+        <activity android:name=".me.AdressActivity" />
+        <activity android:name=".me.NiubiManagerActivity" />
+        <activity android:name=".me.LuckyRecordActivity" />
+        <activity android:name=".me.ChangeNicknameActivity" />
+        <activity android:name=".me.fgt.PayOrderActivity" />
+        <activity android:name=".home.TypeViewActivity" />
+        <activity android:name=".home.BetterGoodActivity" />
+        <activity android:name=".home.TypeItemActivity" />
+        <activity android:name=".JoinDetailActivity" />
+        <activity android:name=".home.SpeedZoneActivity" />
+        <activity android:name=".ImgAndTxtDetail" />
+        <activity android:name=".AtyPreviousLucky" />
+        <activity android:name=".ShareRecordActivity" />
+        <activity android:name=".recent.RecentDetailActivity" />
+        <activity android:name=".recent.CaculateDetailActivity" />
+        <activity android:name=".me.SeeReplyActivity" />
+        <activity android:name=".me.JoinDetailActivity" />
+        <activity android:name=".home.ShareDetailActivity" />
+        <activity android:name=".me.SendShareActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SlplashActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PrizeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/transeparent" />
+        <activity android:name="com.ejar.ItProfileActivity" />
+        <activity android:name=".RulesActivity"></activity>
+        <activity android:name=".me.RechargeMethodAty"></activity>
+
+    </application>
+
+</manifest>

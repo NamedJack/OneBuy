@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<View-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/divider" />-->
+
+        <LinearLayout
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="5dp"
+            android:weightSum="4">
+
+            <wang.wongxd.wquicklib.custom.switchIconView.SwitchIconView
+                android:id="@+id/si_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:si_disabled_color="#bbbbbb"
+                app:si_disabled_alpha="1"
+                app:si_no_dash="true"
+                app:si_tint_color="#f8281e"
+                app:srcCompat="@drawable/home_bottom_icon" />
+
+
+            <wang.wongxd.wquicklib.custom.switchIconView.SwitchIconView
+                android:id="@+id/si_recent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:si_disabled_color="#bbbbbb"
+                app:si_disabled_alpha="1"
+                app:si_enabled="false"
+                app:si_no_dash="true"
+                app:si_tint_color="#f8281e"
+                app:srcCompat="@drawable/recent_bottom_icon" />
+
+            <wang.wongxd.wquicklib.custom.switchIconView.SwitchIconView
+                android:id="@+id/si_favorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:si_disabled_color="#bbbbbb"
+                app:si_disabled_alpha="1"
+                app:si_enabled="false"
+                app:si_no_dash="true"
+                app:si_tint_color="#f8281e"
+                app:srcCompat="@drawable/favorite_bottom_icon" />
+
+            <wang.wongxd.wquicklib.custom.switchIconView.SwitchIconView
+                android:id="@+id/si_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:si_disabled_color="#bbbbbb"
+                app:si_disabled_alpha="1"
+                app:si_enabled="false"
+                app:si_no_dash="true"
+                app:si_tint_color="#f8281e"
+                app:srcCompat="@drawable/me_bottom_icon" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="51dp">
+
+        </FrameLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+<ImageView
+    android:layout_centerVertical="true"
+    android:id="@+id/iv_img"
+    android:layout_width="80dp"
+    android:layout_height="80dp" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:text="xxx"
+            android:id="@+id/tv_product_name"
+            android:paddingLeft="85dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="期数:xxx"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_product_name"
+            android:textSize="12sp"
+            android:paddingLeft="85dp"
+            android:id="@+id/tv_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:paddingLeft="85dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_issue"
+            android:text="我已参与:"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_join_time"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="145dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_issue"
+            android:text="x"
+            android:textColor="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignTop="@id/tv_join_time"
+            android:layout_toRightOf="@id/tv_join_time"
+            android:paddingLeft="5dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_issue"
+            android:text="人次"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignTop="@id/tv_join_time"
+            android:layout_toRightOf="@id/tv_join_time"
+            android:paddingLeft="55dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_issue"
+            android:text="查看详情"
+            android:textColor="#2e86ff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_need_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="总需xx人次"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="剩余222"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_need_people"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:progress="25"
+            android:progressDrawable="@drawable/pb_state" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonPay_lib/commonPay_lib.iml" filepath="$PROJECT_DIR$/commonPay_lib/commonPay_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oneBuy.iml" filepath="$PROJECT_DIR$/oneBuy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wbaselib/wbaselib.iml" filepath="$PROJECT_DIR$/wbaselib/wbaselib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">wBaseLib</string>
+
+    <string name="glide_plus_icon_string">android.resource://</string>
+    <string name="post_delete_tv_d">拖动到此处，进行删除</string>
+    <string name="post_delete_tv_s"> 放开手指，进行删除</string>
+
+    <string name="view_big_img_transitions_name">view_big_img_transitions_name</string>
+</resources>

@@ -1,0 +1,50 @@
+ public void getList(final boolean isLoadMore) {
+        if (!isLoadMore) {
+            pageNo = 1;
+            totalPage = 1;
+        } else {
+            if (pageNo > totalPage) {
+                adapter.loadMoreEnd();
+                return;
+            }
+        }
+        RetrofitUtil.toBaseIntercept(RetrofitImp.getMeApi().getServiceList(App.token, pageNo + "", "10"), new ProgressObserver<String>(new ObserverOnNextListener<String>() {
+            @Override
+            public void onNext(String s, Disposable disposable) {
+                addDisposable(disposable);
+                bindingView.srl.finishRefresh();
+                Logger.e(s);
+                ServiceBean bean = new Gson().fromJson(s, ServiceBean.class);
+                //data不对
+                if (bean.getCode() != 200) {
+                    TU.cT(bean.getMsg());
+                    if (isLoadMore) adapter.loadMoreFail();
+                    return;
+                }
+
+                totalPage = bean.getData().getTotalPage();
+
+                //列表为空
+                if (bean.getData().getList() != null && bean.getData().getList().size() != 0) {
+                    ++pageNo;
+                } else {
+                    if (isLoadMore)
+                        adapter.loadMoreEnd();
+                    return;
+                }
+
+                if (isLoadMore) {
+                    adapter.setNewData(bean.getData().getList());
+                    adapter.loadMoreComplete();
+                } else {
+                    adapter.setNewData(bean.getData().getList());
+                }
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                if (isLoadMore) adapter.loadMoreFail();
+                else bindingView.srl.finishRefresh();
+            }
+        }, ServiceActivity.this));
+    }
